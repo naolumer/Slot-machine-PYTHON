@@ -19,7 +19,7 @@ symbol_value = {
     "C":3,
     "D":2
 }
-
+# check winnings
 def check_winnings(columns, lines, bet, values):
     winnings= 0
     winning_lines = []
@@ -36,7 +36,7 @@ def check_winnings(columns, lines, bet, values):
             winning_lines.append(line + 1)
     
     return winnings,winning_lines
-
+#  spin the slot machine and generate random symbols
 def get_slot_machine_spin(rows, cols, symbols):
     all_symbols = []
     for symbol,symbol_count in symbols.items():
@@ -67,7 +67,7 @@ def print_slot_machine(columns):
                 print(column[row], end="")
         print()
 
-
+# taking deposit from the user
 def deposit():
     
     while True:
@@ -85,7 +85,7 @@ def deposit():
     
     return amount
 
-
+# taking the number of lines to bet on as an input from the user
 def get_number_of_lines():
     
     while True:
@@ -103,7 +103,7 @@ def get_number_of_lines():
    
     return lines
 
-
+# get bet amount from the user
 def get_bet():
     while True:
         amount = input("What would you like to bet on each line? $ ")
